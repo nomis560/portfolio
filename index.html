@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simon Stolpe</title>
+  <!-- TODO 1: Add the Bootstrap link here. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
+  <style>
+    /* TODO 4: Use flexbox to center the card in the vertical and horizontal center. */
+
+    .image-container img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    align-self: center;
+    width: 100%;
+    min-width: 400px;
+    }
+    p{
+        font-family: "Cutive", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+    h1{
+        margin-top: 40px;
+        font-family:"Playwrite PL", cursive;
+    }
+    h2{
+    
+        font-family:"Playwrite PL", cursive;
+        margin-bottom: 20px;    
+    }
+    .image-container {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    .introduction{
+        color: white;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        height: 450px;
+        padding-left: 100px;
+    }
+    .introduction>div{
+        background-color: darkslategray;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .first-grid{
+        display: grid;
+        grid-template-columns: 500px auto;
+        grid-template-rows: 150px auto;
+        grid-auto-rows: 200px;
+        gap: 20px;
+        
+    }
+    .first-grid>div{
+        background-color: white;
+        padding: 40px;
+
+    }
+
+    .hero{
+        grid-row: span 2;
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero img{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .videos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 100px;
+    }
+    .videos div{
+        display: grid;
+        grid-template-columns: 420px 250px;
+        margin: 20px;
+        /*background-color: aqua;*/
+    }
+    .videos p{
+        text-align: left;
+        padding: 20px;
+        padding-left: 5px;
+    }
+    @media  (max-width: 1400px) {
+        .first-grid>div{
+        }
+        .videos div{
+        grid-template-columns: 420px;
+        }
+    }
+
+
+    @media  (max-width: 900px) {
+        .image-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        }
+
+        .introduction{
+            justify-content: center;
+            height: 350px;
+            padding: 0px;
+        }
+        .hero{            
+            order: 1;
+        }
+        .first-grid{
+            grid-template-columns:  auto;
+
+        }
+    }
+  </style>
+</head>
+
+<body>
+    
+<section class="banner">
+    <div class="introduction">
+        <div >
+            <h1>Simon Stolpe</h1>
+            <p >Animator</p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="./images/mountain.png"  alt="mountain">
+    </div>
+</section>
+<section>
+    <div class="first-grid">
+        <div class="padding-thing"></div>
+        <div class="hero">
+            
+            <img src="./images/me.png" />
+            <p style="padding-top: 70px;">hej hej!</p>
+            <p>I am great at all sorts of things </p>
+            <p>like things and stuff</p>
+            <div class="videos">
+                <div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/dZ5BwhGnB-A"></iframe>
+                    <p>An animation I made for practicing lip sync.</p>
+                </div>
+                <div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/T4cFpvoFTXg"></iframe>
+                    <p>A cozy animation with a paralax background made in After Effects.</p>
+                </div>
+                <div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/MLA9fkK7Q-Y"></iframe>
+                    <p>My voice acting is cringe, but the animation still looks pretty cool. Made in ToonBoom Harmony.</p>
+                </div>
+                <div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/OuB6PkOEOlM"></iframe>
+                    <p>A 2D/3D animation made entirely in Blender.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>
+                2D animation
+            </h2>
+            <p style="padding-top: 0px;">
+            I love 2D animation and am happily persuing a career in the field through my education at <a href="https://www.rjl.se/Sorangensfolkhogskola/Utbildningar/Animation/">Sörängens Folkhögskola</a>
+            </p>
+            <hr>
+            <h2>3D modeling</h2>
+            <p style="padding-top: 0px;">
+                In my animated projects I often integrade 3D assets that I make in Blender
+            </p>
+            <hr>
+            <h2> Programming</h2>
+            <p style="padding-top: 0px;">
+                I have an interest in programming. I am currently taking a viritual course in web-development which allowed me to make this website!             
+            </p>
+        </div>
+
+    </div>
+
+
+
+</section>
+</body>
+
+</html>
