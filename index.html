@@ -70,11 +70,10 @@
         grid-template-rows: 150px auto;
         grid-auto-rows: 200px;
         gap: 20px;
-        
     }
     .first-grid>div{
         background-color: white;
-        padding: 40px;
+        padding: 3rem;
 
     }
 
@@ -94,15 +93,16 @@
     }
     .videos{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         padding-top: 100px;
     }
-    .videos div{
+    .videos > div {
         display: grid;
         grid-template-columns: 420px 250px;
-        margin: 20px;
-        /*background-color: aqua;*/
+        margin-top: 20px;
+        background-color: white;
     }
     .videos p{
         text-align: left;
@@ -110,15 +110,15 @@
         padding-left: 5px;
     }
     @media  (max-width: 1400px) {
-        .first-grid>div{
-        }
-        .videos div{
+
+        .videos >div {
         grid-template-columns: 420px;
+            background-color: white;
         }
     }
 
 
-    @media  (max-width: 900px) {
+    @media  (max-width: 1080px) {
         .image-container {
         width: 100%;
         height: 200px;
@@ -134,11 +134,40 @@
         .hero{            
             order: 1;
         }
+        .videos{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .videos > div{
+            grid-template-columns: auto;
+
+        }
+        .videos  >div> div{
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 50.25%;
+            grid-template-columns: auto ;
+
+        }
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
         .first-grid{
             grid-template-columns:  auto;
 
         }
     }
+
+
   </style>
 </head>
 
@@ -165,20 +194,21 @@
             <p>I am great at all sorts of things </p>
             <p>like things and stuff</p>
             <div class="videos">
-                <div>
+                <div><div>
                     <iframe width="420" height="236" src="https://www.youtube.com/embed/dZ5BwhGnB-A"></iframe>
+                </div>
                     <p>An animation I made for practicing lip sync.</p>
                 </div>
-                <div>
-                    <iframe width="420" height="236" src="https://www.youtube.com/embed/T4cFpvoFTXg"></iframe>
+                <div><div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/T4cFpvoFTXg"></iframe></div>
                     <p>A cozy animation with a paralax background made in After Effects.</p>
                 </div>
-                <div>
-                    <iframe width="420" height="236" src="https://www.youtube.com/embed/MLA9fkK7Q-Y"></iframe>
+                <div><div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/MLA9fkK7Q-Y"></iframe></div>
                     <p>My voice acting is cringe, but the animation still looks pretty cool. Made in ToonBoom Harmony.</p>
                 </div>
-                <div>
-                    <iframe width="420" height="236" src="https://www.youtube.com/embed/OuB6PkOEOlM"></iframe>
+                <div><div>
+                    <iframe width="420" height="236" src="https://www.youtube.com/embed/OuB6PkOEOlM"></iframe></div>
                     <p>A 2D/3D animation made entirely in Blender.</p>
                 </div>
             </div>
